@@ -97,7 +97,13 @@ Open the Web Interface in Your Browser to run this project
 
 ---
 
-Team m
+
+🌐 Live Deployment
+Access the live version of AquaSentinel here: 
+
+https://replit.com/@vardhinis57/matsyan-Waveatrix
+
+---
 
 
 
