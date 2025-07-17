@@ -1,0 +1,87 @@
+[
+  {
+    "boatId": "heee",
+    "zone": "Safe Zone",
+    "weight": 44,
+    "time": "17/7/2025, 10:04:53 pm",
+    "gps": {
+      "lat": "9.0180",
+      "lon": "77.0851"
+    },
+    "status": "Safe"
+  },
+  {
+    "boatId": "kkk",
+    "zone": "Safe Zone",
+    "weight": 89,
+    "time": "17/7/2025, 10:04:40 pm",
+    "gps": {
+      "lat": "9.7730",
+      "lon": "79.8054"
+    },
+    "status": "Safe"
+  },
+  {
+    "boatId": "ex",
+    "zone": "Restricted Zone",
+    "weight": 0,
+    "time": "17/7/2025, 9:08:23 pm",
+    "status": "Violation"
+  },
+  {
+    "boatId": "aish",
+    "zone": "Safe Zone",
+    "weight": 78,
+    "time": "17/7/2025, 9:04:35 pm",
+    "status": "Safe"
+  },
+  {
+    "boatId": "fairy",
+    "zone": "Safe Zone",
+    "weight": 67,
+    "time": "17/7/2025, 8:45:13 pm",
+    "status": "Safe"
+  },
+  {
+    "boatId": "fairy",
+    "zone": "Safe Zone",
+    "weight": 67,
+    "time": "17/7/2025, 8:44:16 pm",
+    "status": "Safe"
+  },
+  {
+    "boatId": "fairy",
+    "zone": "Safe Zone",
+    "weight": 67,
+    "time": "17/7/2025, 8:44:16 pm",
+    "status": "Safe"
+  },
+  {
+    "boatId": "fairy",
+    "zone": "Safe Zone",
+    "weight": 67,
+    "time": "17/7/2025, 8:44:16 pm",
+    "status": "Safe"
+  },
+  {
+    "boatId": "vardhini",
+    "zone": "Safe Zone",
+    "weight": 56,
+    "time": "17/7/2025, 8:44:05 pm",
+    "status": "Safe"
+  },
+  {
+    "boatId": "vardhini",
+    "zone": "Safe Zone",
+    "weight": 56,
+    "time": "17/7/2025, 8:44:05 pm",
+    "status": "Safe"
+  },
+  {
+    "boatId": "vardhini",
+    "zone": "Safe Zone",
+    "weight": 56,
+    "time": "17/7/2025, 8:44:05 pm",
+    "status": "Safe"
+  }
+]

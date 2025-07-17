@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AquaSentinel - Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🚨 AquaSentinel Dashboard</h1>
+    <p class="subhead">Monitoring Boat Activity & Zone Violations</p>
+
+    <div class="summary">
+      <p id="safeCount">🟢 Safe Boats: 0</p>
+      <p id="violationCount">🔴 Violations: 0</p>
+    </div>
+    <h3>🗺 Zone Heatmap</h3>
+    <div class="zone-heatmap">
+      <p>🟢 Green = Safe Zone | 🔴 Red = Restricted Zone</p>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <a href="/download" download>
+        <button>⬇️ Download Logs</button>
+      </a>
+    </div>
+
+
+    <div class="log-section">
+      <h3>📋 Alert History</h3>
+      <ul id="dashboardLog"></ul>
+    </div>
+
+    <a href="index.html" style="display: inline-block; margin-top: 20px;">← Back to Simulator</a>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+
+  socket.on("new_alert", (data) => {
+    const logList = document.getElementById("dashboardLog");
+    const li = document.createElement("li");
+    li.textContent = `${data.time} – Boat ${data.boatId} | ${data.zone} | ${data.weight}kg | ${data.status}`;
+    li.style.color = data.status === "Violation" ? "red" : "green";
+    logList.prepend(li);
+  });
+</script>
+
+  <script>
+    const alerts = JSON.parse(localStorage.getItem("alertLog")) || [];
+
+    let safeCount = 0, violationCount = 0;
+    const logList = document.getElementById("dashboardLog");
+
+    alerts.forEach(log => {
+      const li = document.createElement("li");
+      li.textContent = `${log.time} – Boat ${log.boatId} | ${log.zone} | ${log.weight}kg | ${log.status}`;
+      
+      if (log.status === "Violation") {
+        li.style.color = "red";
+        violationCount++;
+      } else {
+        li.style.color = "green";
+        safeCount++;
+      }
+
+      logList.appendChild(li);
+    });
+
+    document.getElementById("safeCount").textContent = `🟢 Safe Boats: ${safeCount}`;
+    document.getElementById("violationCount").textContent = `🔴 Violations: ${violationCount}`;
+  </script>
+
+<script>
+  // Fetch alerts from backend
+  fetch("/alerts")
+    .then(res => res.json())
+    .then(data => {
+      const logList = document.getElementById("dashboardLog");
+      data.forEach(entry => {
+        const li = document.createElement("li");
+        li.textContent = `${entry.time} – Boat ${entry.boatId} | ${entry.zone} | ${entry.weight}kg | ${entry.status}`;
+        li.style.color = entry.status === "Violation" ? "red" : "green";
+        logList.appendChild(li);
+      });
+    });
+
+  function downloadLog() {
+    window.location.href = "/download";
+  }
+</script>
+
+</body>
+</html>

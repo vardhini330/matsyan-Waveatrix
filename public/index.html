@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AquaSentinel - Overfishing Alert System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>AquaSentinel</h1>
+
+    <!-- Zone Status (optional indicator) -->
+    <div id="zoneStatus" style="font-size: 20px; font-weight: bold; margin-bottom: 20px;">
+      🟢 Zone Status: <span id="statusText" style="color: green;">All Clear</span>
+    </div>
+
+    <p class="subhead">Simulate Boat Entry & Catch Weight</p>
+    <!-- 🗺 Zone Map -->
+  <h3>🗺 Zone Activity Map</h3>
+  <div id="map" style="position: relative; height: 250px; background: rgb(94, 94, 206); border: 1px solid #060606; margin-bottom: 20px;">
+    <div style="position:absolute; top:10px; left:10px; background:#e5eae4; padding:3px 6px;">🟢 Safe Zone</div>
+    <div style="position:absolute; bottom:10px; right:10px; background:#eeeaea; padding:3px 6px;">🔴 Restricted Zone</div>
+  </div>
+
+<!-- 🎛 Threshold Settings -->
+  <h3>🎛 Threshold Settings</h3>
+  <div>
+    <label>Set Overfishing Limit (kg):</label>
+    <input type="number" id="limitControl" value="100" style="width:80px;">
+    <span id="currentLimit" style="margin-left:10px; font-weight: bold;">(Current: 100kg)</span>
+  </div>
+
+    <!-- Input Form -->
+    <form id="fishingForm">
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="ta">Tamil</option>
+        <option value="hi">Hindi</option>
+      </select>
+
+      <label for="boatId">Boat ID:</label>
+      <input type="text" id="boatId" required>
+
+      <label for="zone">Zone:</label>
+      <select id="zone">
+        <option value="Safe Zone">Safe Zone</option>
+        <option value="Restricted Zone">Restricted Zone</option>
+      </select>
+
+      <label for="weight">Catch Weight (kg):</label>
+      <input type="number" id="weight" required>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Message -->
+    <div id="alertMessage" class="hidden" style="margin-top: 20px;"></div>
+
+    <!-- Log Section -->
+    <div class="log-section">
+      <h3>📋 Recent Violations</h3>
+      <ul id="alertLog"></ul>
+    </div>
+
+    <!-- Simulate Mesh Communication -->
+    <div style="margin-top: 30px;">
+      <button onclick="simulateMesh()">🔁 Simulate Boat-to-Boat Message</button>
+      <div id="meshLog" style="margin-top: 10px; font-weight: bold;"></div>
+    </div>
+
+    <!-- Admin Dashboard Button -->
+    <div style="text-align:center; margin-top:30px;">
+      <button onclick="window.open('dashboard.html', '_blank')">
+        📊 View Admin Dashboard
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
