@@ -31,32 +31,27 @@ npm install express cors
 📁 3. Project Structure
 Ensure your folder has this structure:
 aquasentinel/
-│
-├── public/
-│   ├── index.html
-│   ├── dashboard.html
-│   ├── script.js
-│   ├── style.css
-│   ├── alert_safe_en.mp3
-│   ├── alert_violation_en.mp3
-│   ├── alert_safe_ta.mp3
-│   ├── alert_violation_ta.mp3
-│   └── ... (other assets)
-│
-├── data.json        # Automatically created on first alert
-├── server.js
-├── package.json
-└── README.md
+public/
+    index.html
+    dashboard.html
+    script.js
+    style.css
+    alert_safe_en.mp3
+    alert_violation_en.mp3
+    alert_safe_ta.mp3
+    alert_violation_ta.mp3
+         ... (other assets)
+
+data.json        # Automatically created on first alert
+server.js
+package.json
+README.md
 
 🚀 4. Run the Server
 Start your backend server using:
 node server.js
 If port 3000 is already in use, run:
 PORT=4000 node server.js
-
-🌐 5. Open in Browser
-📍 Simulator Page: http://localhost:3000/index.html
-📊 Admin Dashboard: http://localhost:3000/dashboard.html
 
 ---
 
@@ -84,6 +79,7 @@ PORT=4000 node server.js
 ---
 
 ▶️ How to Run the Project
+
 Follow these simple step to start using AquaSentinel on your local machine:
 Open the Web Interface in Your Browser to run this project
 
@@ -105,8 +101,22 @@ https://replit.com/@vardhinis57/matsyan-Waveatrix
 
 ---
 
+🎥 Demo Video
 
+Check out our project in action in this short demo video:
 
+👉 [Watch on YouTube](https://youtu.be/abc123XYZ)
 
+_Title: Agentic Hackathon 2025 – Waveatrix_
 
+---
+
+👥 Team Members
+
+1.Sri vardhini S R - Team leader
+2.Sheril Esther V 
+3.Swathi S
+4.Shruthi T K
+
+---
 
