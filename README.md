@@ -114,8 +114,11 @@ _Title: Agentic Hackathon 2025 – Waveatrix_
 👥 Team Members
 
 1.Sri vardhini S R - Team leader
+
 2.Sheril Esther V 
+
 3.Swathi S
+
 4.Shruthi T K
 
 ---
