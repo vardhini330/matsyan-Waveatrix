@@ -105,7 +105,7 @@ https://replit.com/@vardhinis57/matsyan-Waveatrix
 
 Check out our project in action in this short demo video:
 
-👉 [Watch on YouTube](https://youtu.be/pqxTerJ3IZY)
+👉 [https://youtu.be/pqxTerJ3IZY]
 
 _Title: Agentic Hackathon 2025 – Waveatrix_
 
